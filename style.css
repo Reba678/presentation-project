@@ -3,7 +3,7 @@
    --page-2-color: tan;
    --page-3-color: teal;
    --page-4-color: slateblue;
-   --animate-speed: 1s;    
+   --animate-speed: 2s;    
 }
 
 body {
@@ -46,4 +46,51 @@ body {
    display: inline-block;
    padding: 1rem 2rem;
    background: #f4f4f4;
+   color: #333;
+   text-decoration: none;
+   border: none;
+   margin-top: 1rem;
+   font-size: 1.1rem;
+   transition: all 0.3s ease-in;
+}
+
+.btn:hover, 
+.btn-dark {
+   background: #333;
+   color: #fff;
+}
+
+.btn-dark:hover {
+   background: #f4f4f4;
+   color: #333;
+}
+
+/* page animation */
+
+#page-1 h1 {
+   transform: translateY(-1200px);
+   animation: heading var(--animate-speed) forwards ease-in;
+
+}
+
+#page-1 p {
+   transform: translateX(-1800px);
+   animation: text var(--animate-speed) forwards ease-in 1s;
+
+}
+
+
+/* Keyframes */
+@keyframes heading {
+   to {
+      transform: translateY(0);  
+   }
+   
+}
+
+@keyframes text {
+   to {
+      transform: translateX(0);  
+   }
+   
 }
